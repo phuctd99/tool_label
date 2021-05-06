@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="{{ url_for('static', filename= 'css/style.css') }}">
+        <title>FlaskBlog</title>
+    </head>
+    <body>
+        <form method="POST">
+            <h1>Crawl data</h1>
+            <div class='inp' style="text-align: center;">
+                <input name="url" placeholder="url">
+                <input name="xpath" placeholder="xpath">
+                <input type="submit" value="Crawl">
+            </div>
+        </form>
+        {% for src in list_src %}
+            <h3>{{src}}</h3>
+        {% endfor %}
+    </body>
+</html>
